@@ -8,7 +8,8 @@ import math
 import itertools
 from operator import itemgetter
 import json
-
+# Code to Measure time taken by program to execute.
+import time
 
 
 ###########
@@ -201,6 +202,8 @@ def FP_growth(dict_table,support):
 ################
 
 if __name__=='__main__':
+    # store starting time
+    begin = time.time()
     support = 0.2
     frequent_patterns = FP_growth(dict_table,support=support)
     print(" ")
@@ -209,4 +212,6 @@ if __name__=='__main__':
     print(" ")
     print("Frequent itemsets with support:")
     print(json.dumps(frequent_patterns, indent=4))
+    end = time.time()
 
+    print("Execution Time: ", end - begin)
