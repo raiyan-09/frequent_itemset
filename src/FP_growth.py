@@ -16,7 +16,7 @@ import time
 # Load data
 ###########
 
-adult = pd.read_csv('data/adult.data', header=None)
+adult = pd.read_csv('data/smallDataset.data', header=None)
 adult.columns = ['age', 'workclass','fnlwgt', 'education', 
                 'education-num','marital-status','occupation', 'relationship','race',
                 'sex','capital-gain','capital-loss','hours-per-week','native-country','income_category']
